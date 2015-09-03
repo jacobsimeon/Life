@@ -20,6 +20,11 @@ describe Conway::Board do
       expect(board.cell_at(3, 0)).to be_nil
       expect(board.cell_at(0, 3)).to be_nil
     end
+
+    it 'works when the board is not square' do
+      board = Conway::Board.parse('0000')
+      expect(board.cell_at(0, 3)).to be_nil
+    end
   end
 
   describe 'to_s' do

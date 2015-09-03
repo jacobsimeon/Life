@@ -18,8 +18,8 @@ module Conway
     def cell_at(x, y)
       return nil if x < 0
       return nil if y < 0
-      return nil if y > width
-      return nil if x > height
+      return nil if y > height
+      return nil if x > width
 
       grid[y][x]
     end
